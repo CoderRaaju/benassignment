@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items Table and Order Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Take Out</h1>
+    </header>
+    
+    
+       <main>
+        
+        <section id="product-list">
+            <h2>Available Items</h2>
+           
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                        <th>Picture</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Grilled Salmon</td>
+                        <td>$ 15</td>
+                        <td>Freshly grilled salmon served with seasonal vegetables and lemon butter sauce</td>
+                        <td><img src="https://foolproofliving.com/wp-content/uploads/2023/07/Grilled-Sockeye-salmon.jpg" alt="Warm food" width="70"></td>
+                    </tr>
+                    <tr>
+                        <td>Margherita Pizza</td>
+                        <td>$ 10</td>
+                        <td>Classic pizza with fresh mozzarella, basil, and a tangy tomato base.</td>
+                        <td><img src="https://midwestfoodieblog.com/wp-content/uploads/2021/06/FINAL-margherita-flatbread-1-3_1.jpg" alt="mitho hae tw" width="80"></td>
+                    </tr>
+                    <tr>
+                        <td>Chicken Alfredo</td>
+                        <td>$ 20</td>
+                        <td>Creamy alfredo sauce tossed with grilled chicken and fettuccine pasta.</td>
+                        <td><img src="https://fitfoodiefinds.com/wp-content/uploads/2021/02/Chicken-Alfredo-17.jpg" alt="good for eye" width="80"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+      
+          
+        
+    <form id="orderForm">
+        <section id="order-form">
+            <h2>Order Form</h2>
+           </section>
+    </main>
+   
+    
+    <footer>
+        <section id="order-form">
+            <form action="submit-order.php" method="POST">
+                <fieldset>
+                    <legend>Customer Information</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Order Details</legend>
+                    <label for="items">Select Item:</label>
+                    <select id="items" name="item" required>
+                        <option value="product1">Grilled Salmon-$15</option>
+                        <option value="product2">Margherita Pizza-$10 </option>
+                        <option value="product3">Chicken Alfredo-20</option>
+                    </select>
+                    
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" required>
+                </fieldset>
+                
+                <button type="submit">Submit Order</button>
+            </form>
+        </section>
+        
+        <p>&copy; Take Out opened by Raju Bal</p>
+    </footer>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <script>
+        document.getElementById("orderForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+           
+            alert("Order submitted!");
+        });
+    </script>
+    
+</body>
+</html>
